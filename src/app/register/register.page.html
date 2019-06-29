@@ -1,0 +1,52 @@
+<ion-content padding>
+  <h2>Register Here</h2>
+  <form (submit) = "doSignup()">
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input [(ngModel)] = "regData.name" name = "name" type="text" placeholder = "Your Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>IC-Number</ion-label>
+      <ion-input [(ngModel)] = "regData.icNumber" name = "icNumber" type="number" placeholder = "Your IC-Number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>E-mail</ion-label>
+      <ion-input [(ngModel)] = "regData.email" name = "email" type="email" placeholder = "Your E-Mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input [(ngModel)] = "regData.password" name = "password" type="password" placeholder = "Your Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Handphone Number</ion-label>
+      <ion-input [(ngModel)] = "regData.phone" name = "phone" type="tel" placeholder = "Your Phone Number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Address</ion-label>
+      <ion-input [(ngModel)] = "regData.address" name = "address" type="text" placeholder = "Your Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>City/State</ion-label>
+      <ion-input [(ngModel)] = "regData.cityState" name = "cityState" type="text" placeholder = "Your City/State"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>House Type</ion-label>
+      <ion-input [(ngModel)] = "regData.houseType" name = "houseType" type="text" placeholder = "Your House Type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Category</ion-label>
+      <ion-select [(ngModel)] = "regData.category" name = "category" type="text" placeholder = "Your Category">
+        <ion-select-option value="1" selected>Maid</ion-select-option>
+        <ion-select-option value="2" selected>Customer</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button block type = "submit">
+      SignUp
+    </button>
+  </form>
+</ion-content>
+
+<!--<ion-item>
+  <ion-label stacked>Category</ion-label>
+  <ion-input [(ngModel)] = "regData.category" name = "category" type="text" placeholder = "Your Category"></ion-input>
+</ion-item>-->
