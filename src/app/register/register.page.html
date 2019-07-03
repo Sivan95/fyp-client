@@ -1,6 +1,6 @@
 <ion-content padding>
   <h2>Register Here</h2>
-  <form (submit) = "doSignup()">
+  <form (ngSubmit) = "doSignup()">
     <ion-item>
       <ion-label stacked>Username</ion-label>
       <ion-input [(ngModel)] = "regData.name" name = "name" type="text" placeholder = "Your Name"></ion-input>

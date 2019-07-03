@@ -18,6 +18,8 @@ import { HomePageModule } from './home/home.module';
 import { RegisterPageModule } from './register/register.module';
 
 import { HttpModule } from '@angular/http';
+import { HTTP } from '@ionic-native/http/ngx';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,13 +41,15 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     HomePageModule,
     RegisterPageModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AuthServiceService
+    AuthServiceService,
+    HTTP,
   ],
   bootstrap: [AppComponent]
 })

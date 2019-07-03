@@ -10,30 +10,29 @@ import {AuthServiceService} from '../auth-service.service';
 })
 export class RegisterPage{
   loading: any;
-  regData = {name: '', icNumber: '', email: '', 
-            password: '', phone: '', address: '', 
-            cityState: '', houseType: '', category:''};
+  regData = {"name": "", "icNumber": "", "email": "", "password": "", "phone": "", "address": "", "cityState": "", "houseType": "", "category":""};
   
 
   constructor(public navCtrl: NavController, public authService: AuthServiceService, public loadingCtr: LoadingController, private toastCtrl: ToastController) { }
 
   doSignup(){
-    this.showLoader();
+    //this.showLoader();
     this.authService.register(this.regData).then((result)=>{
       this.loading.dismiss();
       this.navCtrl.pop();
     }, (err) => {
-      this.loading.dismiss();
+      //this.loading.dismiss();
       this.presentToast(err);
+      console.log("There is an error")
     });
   }
 
-  showLoader(){
+  /*showLoader(){
     this.loading = this.loadingCtr.create({
       //content: 'Authenticating..'
     });
     this.loading.present();
-  }
+  }*/
   async presentToast(msg){
     const toast  = await this.toastCtrl.create({
       message: msg,
